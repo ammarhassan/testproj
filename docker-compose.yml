@@ -1,0 +1,24 @@
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+
+  db-server:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'test_proj_db'
+      MYSQL_USER: 'trp-user'
+      MYSQL_PASSWORD: 'casigh4fuweb'
+      MYSQL_ROOT_PASSWORD: 'asfdsf4sw4ew'
+  app-server:
+    build: .
+    environment:
+      PYTHONUNBUFFERED: '1'
+      MYSQL_DATABASE: 'test_proj_db'
+      MYSQL_USER: 'trp-user'
+      MYSQL_PASSWORD: 'casigh4fuweb'
+    ports:
+      - "8000:8000"
+    # restart: always
+    # depends_on:
+    #   - db-server
