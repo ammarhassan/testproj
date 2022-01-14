@@ -33,3 +33,5 @@ Docker:
 	Challenges:
 		- Not sure what 'depends_on' does as it did not help me with docker-compose
 		- The problem of docker container dependency may not be a problem if we utilize a production web server like gunicorn/apache rather the runserver which is a development server
+	Links:
+		- Similar db container ready challenge with postgress https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/
