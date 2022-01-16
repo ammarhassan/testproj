@@ -23,6 +23,7 @@ Django:
 		- migrations are run one off after the containers start
 	Links:
 		- Useful Medium article. https://medium.com/@minghz42/docker-setup-for-django-on-mysql-1f063c9d16a0
+		- Useful Django Deployment. https://www.digitalocean.com/community/tutorials/how-to-build-a-django-and-gunicorn-application-with-docker
 	Challenges:
 		- How to produce migrations. Make migration had to be run again outside the containers in a different environment. How does making new migrations work in development? the issue is that the migrations require the setup of the django environment, however, django environment is a container and any migrations produced result in migration inside the container?
 		- Also, django development does not seem easy with Docker, what if we need to change the settings, would it recompile the project?

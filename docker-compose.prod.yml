@@ -12,7 +12,7 @@ services:
       MYSQL_ROOT_PASSWORD: 'asfdsf4sw4ew'
   app-server:
     build: .
-    command: "python -u manage.py runserver 0.0.0.0:8000"
+    command: gunicorn testproj.wsgi:application --bind 0.0.0.0:8000
     environment:
       PYTHONUNBUFFERED: '1'
       PYTHONDONTWRITEBYTECODE: '1'
@@ -21,6 +21,3 @@ services:
       MYSQL_PASSWORD: 'casigh4fuweb'
     ports:
       - "8000:8000"
-    # restart: always
-    # depends_on:
-    #   - db-server
