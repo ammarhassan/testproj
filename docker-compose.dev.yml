@@ -13,7 +13,7 @@ services:
   app-server:
     build:
       context: .
-      dockerfile: dockerfile.dev
+      dockerfile: dockerfile
     environment:
       PYTHONUNBUFFERED: '1'
       PYTHONDONTWRITEBYTECODE: '1'
